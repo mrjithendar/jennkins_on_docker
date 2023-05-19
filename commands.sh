@@ -6,6 +6,7 @@ sudo docker run --name jenkins-docker --rm --detach \
   --publish 2376:2376 \
   docker:dind --storage-driver overlay2
 
+## Creates DOCKER Image
 sudo docker build -t jenkinsci:latest .
 
 sudo docker run --name jenkins-blueocean --restart=on-failure --detach \
